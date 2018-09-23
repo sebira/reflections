@@ -1,0 +1,29 @@
+reflections on lesson 1
+
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+	Viewing a diff reduced the amount of lines that had to be reviewed since only the differences between the two files were shown. All unchanged files stayed invisible to the reader.
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+	You can have a look at the way the code was intended before the introduction of the error.
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?
+
+	As a programmer you can decide when you are done with a task. This is important since the task maybe includes testing and making sure, that the change in code is free of error and that it does not damage other parts of the whole project. You also separate commits when they do not relate logically.
+
+Why do you think some version conrol systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+	In big coding projects there are always separate files that strictly belong together, like cpp and hpp files. So in environments where files are highly interrelated you need a version control system that tracks changes also in multiple files that belong to each other in order for the whole project to perform correcty. Documents in Google Doc for example may be considered unrelated for the normal user.
+
+How can you use the commands git log and git diff to view the history of files?
+
+	git log gives an overview over all changes that have been made to a repository over time. git diff can show what in detail has been changes in each commit compared to another.
+
+How might using version control make you more confident to make changes that could break something?
+
+	If you start in an error free version you can always return to that and undo any mistakes you may have done. You can also identify the point of time where an error occured and isolate the section of code where the error arised. 
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+	Create an repository for my current private project in order to save its current status and be able to do a large rework without fear of breaking it permanently.
