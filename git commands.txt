@@ -1,0 +1,91 @@
+git commands
+
+git add - adds files to the staging area
+useage: git add filename
+
+git branch - shows the current banch
+usage: git branch new_branch_name
+	creates an new branch (label) named after the passed argument
+options:
+	-d branch-name: deletes the branch named branch-name
+
+git checkout - temporarily reset all files to their state of a specific commit
+usage: git checkout commit-id
+	commit-id also can be a branch name (so called tip-of-the-branch)
+usage: git checkout -b new_branch_name
+	combines to commands (git branch new_branch_name and git checkout new_branch_name) and can be used in detached HEAD state
+
+git clone - make a copy of an entire git repository onto your computer
+usage: git clone repo-url
+
+git commit - commits the files that are currently in the staging area
+usage: git commit
+options:
+	-m "commit_message": uing git commit without options it will open the standard texteditor for entering a commit message. this can be shortened by directly entering the commit message on command line
+
+git config - set and change git settings
+options:
+	--global user.email "email": sets the email address of the user
+	--global user.name "name": sets the name of the user
+	--global core.autocrlf true: solves the problem for windows using weird characters for new line indication
+
+git diff - shows the differences between two commits or working directory and staging area
+usage: git diff
+	shows the differences between staging area and current working directory
+usage: git diff --staged
+	shows the differences between staging area and current commits in repository
+usage: git diff commit-id-1 commit-id-2
+	shows the differences between two named commit ids
+options:
+	-- stat: summarize the changes in terms of files changed an number of insertions and deletions
+
+git init  - initialize/create new git repository
+at initialization there will be not commits and no files contained in the repository
+
+git log - shows commit history on current checked out branch
+options:
+	--graph [--oneline]: shows an graphical overview of the commits to the repository
+	--oneline: summarize commits in one line each
+
+git merge - join two or more development histories together
+usage: git merge branch-name-1 [branch-name-2 ...]
+	merges branch-name-1 (and further named branches) into the current branch
+
+git pull - retrieves data from server
+usage: git pull name-of-remote-repo name-of-remote-branch
+	retrieves the most recent commits that are present on remote but not locally and adds them to the history of the current local branch
+
+git push - send local data to server
+usage: git push name-of-remote-destination name-of-local-source
+
+git remote - show connected remote repositories
+usage: git remote add name-for-remote-repo url-of-remote-repo
+	adds the remote reporsitory given the url under the desired name
+
+git reset - remove a file from the staging area
+usage: git reset filename
+usage: git reset --hard
+	removes any changes from staging area and working directory
+
+git show commit-id - shows which changes were introduces by a commit compared to its parent
+
+git status - show status information of current repository
+status information contain the following 
+	- what is the current branch
+	- what is the latest commit
+	- which files are untracked (of which files history is not recorded)
+	- which files are added to the staging area
+
+
+annotations
+
+branches
+a single commit can have multiple branch names
+if you commit new changes only the checked-out branch will be updated
+
+merging
+If you encounter a merge conflict the merge process will be interrupted until you resolve the conflict. To do so
+- edit the conflicted file(s) manually
+- decide which version of the change shall remain and delete obsolete/conflicting code
+- add the recent changes to staging area
+- commit changes from staging area
