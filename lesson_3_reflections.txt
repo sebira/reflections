@@ -1,1 +1,3 @@
-No known content
+When would you want to use a remote repository rather than keeping all your work local?
+
+  It is necessary for collaboration with others to have an accessible location of the repository for all participants. In the same sense I can access the repository from different computers.
