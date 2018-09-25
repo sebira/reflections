@@ -1,1 +1,30 @@
 lesson_2_reflections
+
+What happens when you initialize a repository? Why do you need to do it?
+
+	You have to initialize a repository so that git can create the .git directory which is invisible to the user and which contains all the needed metadata for maintaining the repository.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+	The staging area gives an opportunity to the programmer to collect and review files that logically belong to each other and shall be commited in a single step. Therefore it is normally only a subset of the files from the working directory.
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+	I use the git diff --staged command to see which changes are in the staging area and check whether or not they form a logical unit.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+	Branches are good practice to use if you want to add new features to your code but not introduce them to your productive system just yet. The productive code will continue on e.g. master branch.
+	Also use branches for context switches. For every new development/feature/bugfix create a new branch and megre it with master only when and if you are sure it has reached production quality.
+
+How do the diagrams help you visualize the branch structure?
+
+	It clearly shows the child-parent relations between commits and branches. It can give you hints abount reachable and unreachable commits.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+	Merging two branches means incorporating both change histories into one.
+
+What are the pros and cons of Git's automatic merging vs. always doing merges manually?
+
+	I significantly reduces the amount of manual merging effort when the merge scope is clear. It only bothers the user if there is no clear solution what to merge.
